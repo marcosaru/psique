@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity(name = "consulta")
 @Table(name = "consulta")
 @NoArgsConstructor
@@ -18,8 +20,8 @@ public class Consulta {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-    private String data_consulta;
-    private String valor;
+    private Date data_consulta;
+    private Double valor;
     @OneToOne
     private Psicologo psicologo;
     @OneToOne
@@ -31,6 +33,4 @@ public class Consulta {
         this.psicologo = dados.psicologo();
         this.paciente = dados.paciente();
     }
-    
-    
 }

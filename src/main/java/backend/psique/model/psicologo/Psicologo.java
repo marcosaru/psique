@@ -25,4 +25,12 @@ public class Psicologo {
         this.crp = dados.crp();
         this.qtde_paciente = dados.qtde_paciente();
     }
+
+    public Psicologo(Psicologo psicologo) {
+        this.cpf = psicologo.getCpf();
+        this.nome = psicologo.getNome();
+        this.salario = psicologo.getSalario();
+        this.crp = psicologo.getCrp();
+        this.qtde_paciente = psicologo.getQtde_paciente();
+    }
 }

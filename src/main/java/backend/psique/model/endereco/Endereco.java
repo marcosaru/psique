@@ -19,4 +19,23 @@ public class Endereco {
     private String uf;
     private String numero;
     private String complemento;
+
+    public Endereco(Endereco dados) {
+        this.logradouro = dados.getLogradouro();
+        this.bairro = dados.getBairro();
+        this.cep = dados.getCep();
+        this.cidade = dados.getCidade();
+        this.uf = dados.getUf();
+        this.numero = dados.getNumero();
+        this.complemento = dados.getComplemento();
+    }
+    public Endereco (DadosEndereco dados){
+        this.logradouro = dados.logradouro();
+        this.bairro = dados.bairro();
+        this.cep = dados.cep();
+        this.cidade = dados.cidade();
+        this.uf = dados.uf();
+        this.numero = dados.numero();
+        this.complemento = dados.complemento();
+    }
 }
